@@ -8,38 +8,44 @@
         body {
             margin: 0;
             font-family: Arial, sans-serif;
-            background: #0c0c0c;
+            background: radial-gradient(circle at top, #1a1a1a, #000000);
             color: white;
             text-align: center;
         }
 
         header {
             padding: 80px 20px;
-            background: linear-gradient(180deg, #000000, #1a1a1a);
         }
 
         .logo {
             width: 200px;
             margin-bottom: 20px;
-            filter: drop-shadow(0 0 20px red);
+            filter: drop-shadow(0 0 25px red);
         }
 
         h1 {
-            font-size: 50px;
+            font-size: 55px;
             margin: 10px 0;
             color: gold;
-            letter-spacing: 3px;
+            letter-spacing: 4px;
+            animation: glow 2s infinite alternate;
+        }
+
+        @keyframes glow {
+            from { text-shadow: 0 0 10px gold; }
+            to { text-shadow: 0 0 25px red; }
         }
 
         .tagline {
             font-size: 20px;
             color: #ccc;
+            margin-bottom: 30px;
         }
 
         .btn {
             display: inline-block;
-            margin-top: 30px;
-            padding: 15px 40px;
+            margin: 10px;
+            padding: 15px 35px;
             background: red;
             color: white;
             text-decoration: none;
@@ -50,19 +56,50 @@
 
         .btn:hover {
             background: darkred;
-            transform: scale(1.05);
+            transform: scale(1.08);
         }
 
         section {
             padding: 60px 20px;
         }
 
-        footer {
+        .players {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        .card {
             background: #111;
+            padding: 25px;
+            width: 250px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(255,0,0,0.5);
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 0 25px red;
+        }
+
+        .role {
+            color: gold;
+            font-weight: bold;
+        }
+
+        footer {
+            background: #0a0a0a;
             padding: 20px;
             font-size: 14px;
             color: #777;
         }
+
+        .social {
+            margin-top: 20px;
+        }
+
     </style>
 </head>
 
@@ -72,12 +109,44 @@
     <img src="logo.png" class="logo" alt="Final Rite Logo">
     <h1>FINAL RITE</h1>
     <div class="tagline">Rise of the Dragon</div>
-    <a class="btn" href="#">Join The Clan</a>
+
+    <div class="social">
+       <a class="btn" 
+   href="https://instagram.com/final.rite" 
+   target="_blank"
+   style="background: linear-gradient(45deg,#f58529,#dd2a7b,#8134af,#515bd4);">
+   Follow @final.rite
+</a>
+
 </header>
 
 <section>
-    <h2>About Final Rite</h2>
-    <p>Final Rite Esports is a competitive BGMI team built on dominance, discipline, and destruction.</p>
+    <h2>Our Squad</h2>
+    <div class="players">
+        <div class="card">
+            <h3>Derik</h3>
+            <div class="role">IGL / Support</div>
+            <p>Strategic mastermind leading Final Rite to victory.</p>
+        </div>
+
+        <div class="card">
+            <h3>Player 2</h3>
+            <div class="role">Assaulter</div>
+            <p>Frontline fragger with insane reflexes.</p>
+        </div>
+
+        <div class="card">
+            <h3>Player 3</h3>
+            <div class="role">Sniper</div>
+            <p>Long-range eliminator. Silent but deadly.</p>
+        </div>
+
+        <div class="card">
+            <h3>Player 4</h3>
+            <div class="role">Support</div>
+            <p>Backline protector and clutch specialist.</p>
+        </div>
+    </div>
 </section>
 
 <footer>
