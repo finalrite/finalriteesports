@@ -4,103 +4,114 @@
     <title>Final Rite Esports</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: radial-gradient(circle at top, #1a1a1a, #000000);
-            color: white;
-            text-align: center;
-        }
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: radial-gradient(circle at top, #1a1a1a, #000000);
+    color: white;
+    text-align: center;
+    scroll-behavior: smooth;
+}
 
-        header {
-            padding: 80px 20px;
-        }
+header {
+    padding: 80px 20px;
+}
 
-        .logo {
-            width: 200px;
-            margin-bottom: 20px;
-            filter: drop-shadow(0 0 25px red);
-        }
+.logo {
+    width: 200px;
+    margin-bottom: 20px;
+    filter: drop-shadow(0 0 25px red);
+}
 
-        h1 {
-            font-size: 55px;
-            margin: 10px 0;
-            color: gold;
-            letter-spacing: 4px;
-            animation: glow 2s infinite alternate;
-        }
+h1 {
+    font-size: 55px;
+    margin: 10px 0;
+    color: gold;
+    letter-spacing: 4px;
+    animation: glow 2s infinite alternate;
+}
 
-        @keyframes glow {
-            from { text-shadow: 0 0 10px gold; }
-            to { text-shadow: 0 0 25px red; }
-        }
+@keyframes glow {
+    from { text-shadow: 0 0 10px gold; }
+    to { text-shadow: 0 0 30px red; }
+}
 
-        .tagline {
-            font-size: 20px;
-            color: #ccc;
-            margin-bottom: 30px;
-        }
+.tagline {
+    font-size: 20px;
+    color: #ccc;
+    margin-bottom: 30px;
+}
 
-        .btn {
-            display: inline-block;
-            margin: 10px;
-            padding: 15px 35px;
-            background: red;
-            color: white;
-            text-decoration: none;
-            border-radius: 6px;
-            font-weight: bold;
-            transition: 0.3s;
-        }
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin: 10px;
+    padding: 15px 35px;
+    background: linear-gradient(45deg,#f58529,#dd2a7b,#8134af,#515bd4);
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: 0.3s;
+}
 
-        .btn:hover {
-            background: darkred;
-            transform: scale(1.08);
-        }
+.btn:hover {
+    transform: scale(1.08);
+}
 
-        section {
-            padding: 60px 20px;
-        }
+section {
+    padding: 80px 20px;
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.8s ease;
+}
 
-        .players {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 30px;
-        }
+section.show {
+    opacity: 1;
+    transform: translateY(0);
+}
 
-        .card {
-            background: #111;
-            padding: 25px;
-            width: 250px;
-            border-radius: 10px;
-            box-shadow: 0 0 15px rgba(255,0,0,0.5);
-            transition: 0.3s;
-        }
+.players {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
 
-        .card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 0 25px red;
-        }
+.card {
+    background: #111;
+    padding: 20px;
+    width: 250px;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(255,0,0,0.5);
+    transition: 0.3s;
+}
 
-        .role {
-            color: gold;
-            font-weight: bold;
-        }
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 25px red;
+}
 
-        footer {
-            background: #0a0a0a;
-            padding: 20px;
-            font-size: 14px;
-            color: #777;
-        }
+.card img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
 
-        .social {
-            margin-top: 20px;
-        }
+.role {
+    color: gold;
+    font-weight: bold;
+}
 
-    </style>
+footer {
+    background: #0a0a0a;
+    padding: 20px;
+    font-size: 14px;
+    color: #777;
+}
+</style>
 </head>
 
 <body>
@@ -110,38 +121,47 @@
     <h1>FINAL RITE</h1>
     <div class="tagline">Rise of the Dragon</div>
 
-    <div class="social">
-       <a class="btn" 
-   href="https://instagram.com/final.rite" 
-   target="_blank"
-   style="background: linear-gradient(45deg,#f58529,#dd2a7b,#8134af,#515bd4);">
-   Follow @final.rite
-</a>
-
+    <a class="btn" href="https://instagram.com/final.rite" target="_blank">
+        <!-- Instagram SVG Icon -->
+        <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 0 24 24" fill="white">
+            <path d="M7 2C4.2 2 2 4.2 2 7v10c0 2.8 2.2 5 5 5h10c2.8 
+            0 5-2.2 5-5V7c0-2.8-2.2-5-5-5H7zm5 
+            5.2A4.8 4.8 0 1112 17a4.8 4.8 0 
+            010-9.6zm6.4-.9a1.2 1.2 0 
+            11-2.4 0 1.2 1.2 0 012.4 
+            0zM12 9a3 3 0 100 6 3 3 0 
+            000-6z"/>
+        </svg>
+        Follow @final.rite
+    </a>
 </header>
 
-<section>
+<section id="players">
     <h2>Our Squad</h2>
     <div class="players">
         <div class="card">
+            <img src="player1.jpg" alt="Derik">
             <h3>Derik</h3>
             <div class="role">IGL / Support</div>
             <p>Strategic mastermind leading Final Rite to victory.</p>
         </div>
 
         <div class="card">
+            <img src="player2.jpg" alt="Player 2">
             <h3>Player 2</h3>
             <div class="role">Assaulter</div>
             <p>Frontline fragger with insane reflexes.</p>
         </div>
 
         <div class="card">
+            <img src="player3.jpg" alt="Player 3">
             <h3>Player 3</h3>
             <div class="role">Sniper</div>
             <p>Long-range eliminator. Silent but deadly.</p>
         </div>
 
         <div class="card">
+            <img src="player4.jpg" alt="Player 4">
             <h3>Player 4</h3>
             <div class="role">Support</div>
             <p>Backline protector and clutch specialist.</p>
@@ -152,6 +172,21 @@
 <footer>
     © 2026 Final Rite Esports | All Rights Reserved
 </footer>
+
+<script>
+const sections = document.querySelectorAll("section");
+
+window.addEventListener("scroll", () => {
+    sections.forEach(section => {
+        const position = section.getBoundingClientRect().top;
+        const screenHeight = window.innerHeight;
+
+        if (position < screenHeight - 100) {
+            section.classList.add("show");
+        }
+    });
+});
+</script>
 
 </body>
 </html>
