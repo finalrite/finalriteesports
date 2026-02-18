@@ -3,115 +3,20 @@
 <head>
     <title>Final Rite Esports</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Uncial+Antiqua&display=swap" rel="stylesheet">
 
 <style>
+
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: 'Cinzel', serif;
     background: radial-gradient(circle at top, #1a1a1a, #000000);
     color: white;
     text-align: center;
     scroll-behavior: smooth;
 }
 
-header {
-    padding: 80px 20px;
-}
-
-.logo {
-    width: 200px;
-    margin-bottom: 20px;
-    filter: drop-shadow(0 0 25px red);
-}
-
-h1 {
-    font-size: 55px;
-    margin: 10px 0;
-    color: gold;
-    letter-spacing: 4px;
-    animation: glow 2s infinite alternate;
-}
-
-@keyframes glow {
-    from { text-shadow: 0 0 10px gold; }
-    to { text-shadow: 0 0 30px red; }
-}
-
-.tagline {
-    font-size: 20px;
-    color: #ccc;
-    margin-bottom: 30px;
-}
-
-.btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    margin: 10px;
-    padding: 15px 35px;
-    background: linear-gradient(45deg,#f58529,#dd2a7b,#8134af,#515bd4);
-    color: white;
-    text-decoration: none;
-    border-radius: 6px;
-    font-weight: bold;
-    transition: 0.3s;
-}
-
-.btn:hover {
-    transform: scale(1.08);
-}
-
-section {
-    padding: 80px 20px;
-    opacity: 0;
-    transform: translateY(40px);
-    transition: all 0.8s ease;
-}
-
-section.show {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-.players {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 30px;
-}
-
-.card {
-    background: #111;
-    padding: 20px;
-    width: 250px;
-    border-radius: 12px;
-    box-shadow: 0 0 15px rgba(255,0,0,0.5);
-    transition: 0.3s;
-}
-
-.card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 0 25px red;
-}
-
-.card img {
-    width: 100%;
-    border-radius: 10px;
-    margin-bottom: 15px;
-}
-
-.role {
-    color: gold;
-    font-weight: bold;
-}
-
-footer {
-    background: #0a0a0a;
-    padding: 20px;
-    font-size: 14px;
-    color: #777;
-}
-    #particles {
+#particles {
     position: fixed;
     top: 0;
     left: 0;
@@ -120,7 +25,155 @@ footer {
     z-index: -1;
 }
 
+/* HEADER */
+
+header {
+    padding: 100px 20px;
+}
+
+.logo {
+    width: 220px;
+    margin-bottom: 25px;
+    filter: drop-shadow(0 0 25px red);
+}
+
+h1 {
+    font-family: 'Uncial Antiqua', cursive;
+    font-size: 65px;
+    margin: 10px 0;
+    color: gold;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+    from { text-shadow: 0 0 15px gold; }
+    to { text-shadow: 0 0 35px red; }
+}
+
+.tagline {
+    font-size: 20px;
+    color: #ccc;
+    margin-bottom: 40px;
+    letter-spacing: 2px;
+}
+
+/* INSTAGRAM BUTTON */
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 16px 40px;
+    background: linear-gradient(45deg,#f58529,#dd2a7b,#8134af,#515bd4);
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px rgba(255,0,0,0.7);
+}
+
+/* SECTIONS */
+
+section {
+    padding: 100px 20px;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 1s ease;
+}
+
+section.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* DIVIDER STYLE */
+
+h2 {
+    font-family: 'Uncial Antiqua', cursive;
+    font-size: 40px;
+    color: gold;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+h2::after {
+    content: "";
+    display: block;
+    width: 120px;
+    height: 2px;
+    background: linear-gradient(to right, transparent, gold, transparent);
+    margin: 15px auto 0;
+}
+
+/* PLAYER SECTION */
+
+.players {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 35px;
+}
+
+.card {
+    background: linear-gradient(145deg, #111, #1a1a1a);
+    padding: 25px;
+    width: 260px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(255,0,0,0.4);
+    transition: 0.4s;
+}
+
+.card:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 0 35px red;
+}
+
+.card img {
+    width: 100%;
+    border-radius: 12px;
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    font-size: 22px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: #ff4444;
+    margin: 10px 0;
+}
+
+.role {
+    color: gold;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 14px;
+    color: #bbb;
+}
+
+/* FOOTER */
+
+footer {
+    background: #0a0a0a;
+    padding: 25px;
+    font-size: 14px;
+    color: #777;
+    letter-spacing: 1px;
+}
+
 </style>
+
 
 </head>
     
